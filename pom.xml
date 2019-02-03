@@ -7,7 +7,9 @@
     <groupId>hellofresh</groupId>
     <artifactId>hellofresh</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
+
         <!-- To follow test driven development -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -64,4 +66,20 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+        <!-- To generate TestNg reports using maven command line-->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.12</version>
+            <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+        </plugin>
+        </plugins>
+    </build>
 </project>
